@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstration of different CSS color formats including named, HEX, RGB, HSL, and RGBA.">
+    <title>CSS Color Formats Demonstration</title>
+    <link rel="stylesheet" href="colors.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Color Formats Demonstration</h1>
+        <p>This page displays the exact same color base (Red / Coral) rendered using five different CSS color specifications.</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Named Color -->
+        <div class="color-card">
+            <div class="color-box color-named"></div>
+            <div class="color-details">
+                <h2>1. Named Color</h2>
+                <p>Value: <code>color: red;</code> or <code>background-color: red;</code></p>
+                <p>Uses one of the 140 English color names built directly into the browser standard.</p>
+            </div>
+        </div>
+
+        <!-- HEX Color -->
+        <div class="color-card">
+            <div class="color-box color-hex"></div>
+            <div class="color-details">
+                <h2>2. HEX Format</h2>
+                <p>Value: <code>background-color: #ff0000;</code></p>
+                <p>Hexadecimal representation of Red, Green, and Blue intensities from 00 to ff.</p>
+            </div>
+        </div>
+
+        <!-- RGB Color -->
+        <div class="color-card">
+            <div class="color-box color-rgb"></div>
+            <div class="color-details">
+                <h2>3. RGB Format</h2>
+                <p>Value: <code>background-color: rgb(255, 0, 0);</code></p>
+                <p>Specifies color intensities numerically for Red, Green, and Blue channels from 0 to 255.</p>
+            </div>
+        </div>
+
+        <!-- HSL Color -->
+        <div class="color-card">
+            <div class="color-box color-hsl"></div>
+            <div class="color-details">
+                <h2>4. HSL Format</h2>
+                <p>Value: <code>background-color: hsl(0, 100%, 50%);</code></p>
+                <p>Defines color using Hue (angle on color wheel 0-360), Saturation (percentage), and Lightness (percentage).</p>
+            </div>
+        </div>
+
+        <!-- RGBA (Transparent) Color -->
+        <div class="color-card">
+            <div class="color-box color-rgba">
+                <span>Overlay Text</span>
+            </div>
+            <div class="color-details">
+                <h2>5. RGBA Format (Transparent)</h2>
+                <p>Value: <code>background-color: rgba(255, 0, 0, 0.4);</code></p>
+                <p>Adds a fourth value (Alpha channel) from 0.0 (fully transparent) to 1.0 (fully opaque) to create transparency overlays.</p>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

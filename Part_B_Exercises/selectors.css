@@ -1,0 +1,123 @@
+/* ===== 1. Universal Selector (*) ===== */
+/* Selects every element on the page. Typically used for resets. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    padding-bottom: 3rem;
+}
+
+/* ===== 2. Element Selector (p) ===== */
+/* Selects all elements of a given tag name. */
+p {
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    color: #475569;
+}
+
+/* ===== 3. Class Selector (.card) ===== */
+/* Selects elements with class="card". Written with a leading dot. */
+.card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+/* ===== 4. ID Selector (#main-header) ===== */
+/* Selects the single element with id="main-header". Written with a leading hash. */
+#main-header {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== 5. Group Selector (h1, h2, h3, h4) ===== */
+/* Selects multiple selectors simultaneously. Separated by commas. */
+h1, h2, h3, h4 {
+    font-family: 'Segoe UI', sans-serif;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    border-left: 4px solid #3b82f6;
+    padding-left: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Layout container styling */
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.selector-section {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+}
+
+code {
+    background-color: #f1f5f9;
+    color: #ef4444;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* ===== 6. Descendant Selector (space) ===== */
+/* Selects <a> elements that are INSIDE a <nav> (at any level of nesting). */
+.descendant-demo p {
+    color: #d97706;
+    font-style: italic;
+    background-color: #fffbeb;
+    padding: 0.5rem;
+    border-left: 3px solid #f59e0b;
+}
+
+/* ===== 7. Child Selector (>) ===== */
+/* Selects elements that are direct, immediate children of another element. */
+.parent-demo > p {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.nested-box {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+}
+
+/* ===== 8. Adjacent Sibling Selector (+) ===== */
+/* Selects the sibling element that comes immediately after another element. */
+h3 + p {
+    font-weight: bold;
+    color: #2563eb;
+    background-color: #eff6ff;
+    padding: 0.5rem;
+    border-left: 3px solid #3b82f6;
+}
+
+/* ===== 9. General Sibling Selector (~) ===== */
+/* Selects all sibling elements that come after another element. */
+h4 ~ p {
+    color: #7c3aed;
+    background-color: #f5f3ff;
+    padding: 0.5rem;
+    border-left: 3px solid #8b5cf6;
+}

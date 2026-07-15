@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstration of the five CSS position properties.">
+    <title>CSS Positioning Demonstration</title>
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body>
+
+    <!-- Static Header -->
+    <header>
+        <h1>CSS Positioning (static, relative, absolute, fixed, sticky)</h1>
+        <p>This page demonstrates how the <code>position</code> property affects layout rendering and offset behavior.</p>
+    </header>
+
+    <!-- Fixed Element (Floating Feedback Button) -->
+    <div class="fixed-badge">
+        Fixed Feedback
+    </div>
+
+    <main class="container">
+
+        <!-- Sticky Header Demo Container -->
+        <section class="demo-card sticky-container">
+            <!-- Sticky Element -->
+            <div class="sticky-bar">
+                Sticky Sub-Header (scroll to watch me stick to the top)
+            </div>
+            
+            <div class="card-content">
+                <h2>1. Sticky Position (<code>position: sticky</code>)</h2>
+                <p>Scroll down inside this container or the page. The sub-header bar above is positioned <code>sticky</code>. It behaves like a normal relative element until you scroll past it, then it locks (sticks) to the top of the screen or container viewport.</p>
+                <p>This is commonly used for persistent menus, table headers, or sidebar summaries.</p>
+                <div class="scroll-filler">Scroll down...</div>
+            </div>
+        </section>
+
+        <!-- Static Positioning -->
+        <section class="demo-card">
+            <h2>2. Static Position (<code>position: static</code>)</h2>
+            <p>This is the default positioning method for all elements. The element flows naturally according to the document layout. Setting offsets (<code>top</code>, <code>left</code>, etc.) has no effect on static elements.</p>
+            <div class="box-static">
+                I am Static (Default Flow)
+            </div>
+        </section>
+
+        <!-- Relative Positioning -->
+        <section class="demo-card">
+            <h2>3. Relative Position (<code>position: relative</code>)</h2>
+            <p>The element is offset relative to its normal position in the document flow. The surrounding elements act as if the element was never moved, meaning its original space is fully preserved.</p>
+            <div class="box-relative">
+                I am Relative (Offset 20px down and 30px right)
+            </div>
+        </section>
+
+        <!-- Absolute Positioning (Badge inside Relative Parent) -->
+        <section class="demo-card relative-parent">
+            <!-- Absolute Element -->
+            <div class="absolute-badge">
+                NEW
+            </div>
+
+            <h2>4. Absolute Position (<code>position: absolute</code>)</h2>
+            <p>The element is removed from the normal layout flow and positioned precisely relative to its nearest <b>positioned (non-static) parent</b>. In this case, the red "NEW" badge in the top-right corner is positioned absolutely inside this relative section card.</p>
+            <p>If no positioned parent existed, it would align relative to the HTML body itself.</p>
+        </section>
+
+        <!-- Fixed Positioning Info -->
+        <section class="demo-card">
+            <h2>5. Fixed Position (<code>position: fixed</code>)</h2>
+            <p>Look at the bottom-right corner of your browser screen. There is a blue floating "Fixed Feedback" badge. It is positioned using <code>position: fixed</code>.</p>
+            <p>A fixed element is removed from the layout flow and positioned relative to the browser viewport itself. It remains locked in place even when you scroll the webpage.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>

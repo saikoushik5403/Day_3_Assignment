@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstration of the nine primary CSS selectors.">
+    <title>CSS Selectors Demonstration</title>
+    <link rel="stylesheet" href="selectors.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>CSS Selectors Demonstration</h1>
+        <p>This page demonstrates all nine major CSS selectors with comments in the stylesheet explaining each.</p>
+    </header>
+
+    <main class="content-container">
+        
+        <section class="selector-section">
+            <h2>1. Universal Selector (*)</h2>
+            <p>Every element on this page is styled with <code>box-sizing: border-box</code> and clean margins using the universal selector <code>*</code>.</p>
+        </section>
+
+        <section class="selector-section">
+            <h2>2. Element Selector (p)</h2>
+            <p>This paragraph is styled using the element selector targeting all <code>&lt;p&gt;</code> tags. It has a customized font line-height and color.</p>
+        </section>
+
+        <section class="selector-section">
+            <h2>3. Class Selector (.card)</h2>
+            <div class="card">
+                <h3>This is a class-styled card</h3>
+                <p>Styled with the class selector <code>.card</code>, applying a border, padding, and subtle shadow.</p>
+            </div>
+        </section>
+
+        <section class="selector-section">
+            <h2>4. ID Selector (#main-header)</h2>
+            <p>The top page header has a dark slate background, centered text, and custom padding because it is styled using the ID selector <code>#main-header</code>.</p>
+        </section>
+
+        <section class="selector-section">
+            <h2>5. Group Selector (h1, h2)</h2>
+            <p>All <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> headings share the same font family and blue color because they are grouped in the stylesheet.</p>
+        </section>
+
+        <section class="selector-section">
+            <h2>6. Descendant Selector (div p)</h2>
+            <div class="descendant-demo">
+                <p>This paragraph is inside a <code>.descendant-demo</code> div. The descendant selector (space) targets any paragraph nested inside this div.</p>
+                <span>This span is not targeted.</span>
+            </div>
+        </section>
+
+        <section class="selector-section">
+            <h2>7. Child Selector (.parent > p)</h2>
+            <div class="parent-demo">
+                <p>This paragraph is a direct child of <code>.parent-demo</code> and turns green.</p>
+                <div class="nested-box">
+                    <p>This paragraph is nested inside a sub-div (grandchild), so it does NOT match the child selector and remains standard.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="selector-section">
+            <h2>8. Adjacent Sibling Selector (h2 + p)</h2>
+            <h3>An h3 Heading (Sibling)</h3>
+            <p>This paragraph immediately follows the <code>&lt;h3&gt;</code> heading, so it is styled with a bold weight using the adjacent sibling selector <code>+</code>.</p>
+            <p>This paragraph is a sibling but does not immediately follow the heading, so it is normal weight.</p>
+        </section>
+
+        <section class="selector-section">
+            <h2>9. General Sibling Selector (h4 ~ p)</h2>
+            <h4>An h4 Heading (Sibling Anchor)</h4>
+            <p>This sibling paragraph gets styled with purple text.</p>
+            <span>An unrelated sibling span.</span>
+            <p>This sibling paragraph also gets styled with purple text because it follows the h4 sibling anchor (even though a span is in between).</p>
+        </section>
+
+    </main>
+
+</body>
+</html>

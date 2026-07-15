@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstration of block, inline, and inline-block display modes in CSS.">
+    <title>CSS Display Modes Demonstration</title>
+    <link rel="stylesheet" href="display_modes.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Display Modes: Block, Inline, and Inline-Block</h1>
+        <p>This page visually illustrates the rendering differences between the three main display properties.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- 1. display: block -->
+        <section class="display-section">
+            <h2>1. Display: Block (<code>display: block</code>)</h2>
+            <p>Block elements stack vertically, take up 100% of the parent container's width by default, and fully respect set width, height, margins, and padding.</p>
+            <div class="demo-wrapper">
+                <div class="block-box">Block Box 1</div>
+                <div class="block-box">Block Box 2</div>
+            </div>
+            <div class="feature-notes">
+                <ul>
+                    <li><b>Line Break:</b> Starts on a new line.</li>
+                    <li><b>Width/Height:</b> Fully respected (set to <code>150px &times; 60px</code>).</li>
+                    <li><b>Margins:</b> Vertical margins (set to <code>15px</code>) create space above/below.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. display: inline -->
+        <section class="display-section">
+            <h2>2. Display: Inline (<code>display: inline</code>)</h2>
+            <p>Inline elements sit side-by-side on the same line, wrapping like text. They ignore width and height properties. Vertical margins and padding do not push other elements away.</p>
+            <div class="demo-wrapper inline-wrapper">
+                <span class="inline-box">Inline Box 1</span>
+                <span class="inline-box">Inline Box 2</span>
+                <span class="inline-box">Inline Box 3</span>
+            </div>
+            <div class="feature-notes">
+                <ul>
+                    <li><b>Line Break:</b> Does NOT start on a new line (sits side-by-side).</li>
+                    <li><b>Width/Height:</b> Ignored (the boxes only wrap their text despite being set to <code>150px &times; 60px</code> in CSS).</li>
+                    <li><b>Margins:</b> Vertical margins are ignored; horizontal margins are respected.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 3. display: inline-block -->
+        <section class="display-section">
+            <h2>3. Display: Inline-Block (<code>display: inline-block</code>)</h2>
+            <p>Inline-block elements flow side-by-side on the same line like inline elements, but they fully respect width, height, margins, and padding like block elements.</p>
+            <div class="demo-wrapper">
+                <div class="inline-block-box">Inline-Block 1</div>
+                <div class="inline-block-box">Inline-Block 2</div>
+                <div class="inline-block-box">Inline-Block 3</div>
+            </div>
+            <div class="feature-notes">
+                <ul>
+                    <li><b>Line Break:</b> Sits side-by-side like inline.</li>
+                    <li><b>Width/Height:</b> Fully respected (styled at <code>180px &times; 60px</code>).</li>
+                    <li><b>Margins:</b> Vertical and horizontal margins are fully respected (set to <code>10px</code>).</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

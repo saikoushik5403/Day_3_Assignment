@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    padding: 2rem;
+}
+
+header {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+h1 {
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.color-card {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Core box styles */
+.color-box {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    flex-shrink: 0;
+    
+    /* Center text internally for RGBA overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-details {
+    flex-grow: 1;
+}
+
+.color-details h2 {
+    color: #0f172a;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.color-details p {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.4;
+}
+
+code {
+    background-color: #f1f5f9;
+    color: #ef4444;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+/* ===== Colors specifications ===== */
+
+/* 1. Named */
+.color-named {
+    background-color: red;
+}
+
+/* 2. HEX */
+.color-hex {
+    background-color: #ff0000;
+}
+
+/* 3. RGB */
+.color-rgb {
+    background-color: rgb(255, 0, 0);
+}
+
+/* 4. HSL */
+.color-hsl {
+    background-color: hsl(0, 100%, 50%);
+}
+
+/* 5. RGBA (with transparency) */
+.color-rgba {
+    /* Uses a dotted background style underneath to show off transparency */
+    background: linear-gradient(45deg, #cbd5e1 25%, transparent 25%), 
+                linear-gradient(-45deg, #cbd5e1 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #cbd5e1 75%), 
+                linear-gradient(-45deg, transparent 75%, #cbd5e1 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    position: relative;
+}
+
+.color-rgba::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 0, 0, 0.4); /* transparent red overlay */
+    border-radius: 6px;
+}
+
+.color-rgba span {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    font-size: 0.85rem;
+}

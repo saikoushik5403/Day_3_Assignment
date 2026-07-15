@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demonstration of the CSS Box Model with content-box vs border-box.">
+    <title>CSS Box Model Demonstration</title>
+    <link rel="stylesheet" href="box_model.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Box Model: content-box vs. border-box</h1>
+        <p>This page compares the default browser behavior (content-box) against the modern box-sizing fix (border-box).</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Box 1: content-box -->
+        <section class="demo-section">
+            <h2>1. Default Sizing (content-box)</h2>
+            <p>Here, the set dimensions apply <b>only to the content area</b>. Padding and borders are added on top, inflating the total size.</p>
+            
+            <div class="box content-box">
+                Content Area (300px &times; 100px)
+            </div>
+
+            <div class="calculation-card">
+                <h3>Dimensions Math:</h3>
+                <ul>
+                    <li>Declared Width: <code>300px</code></li>
+                    <li>Padding (Left/Right): <code>20px + 20px = 40px</code></li>
+                    <li>Border (Left/Right): <code>5px + 5px = 10px</code></li>
+                    <li><b>Total Visible Width:</b> <code>300 + 40 + 10 = 350px</code></li>
+                </ul>
+                <ul>
+                    <li>Declared Height: <code>100px</code></li>
+                    <li>Padding (Top/Bottom): <code>20px + 20px = 40px</code></li>
+                    <li>Border (Top/Bottom): <code>5px + 5px = 10px</code></li>
+                    <li><b>Total Visible Height:</b> <code>100 + 40 + 10 = 150px</code></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Box 2: border-box -->
+        <section class="demo-section">
+            <h2>2. Standard Sizing (border-box)</h2>
+            <p>Here, the padding and border are <b>included inside</b> the declared width and height. The content area shrinks to accommodate them.</p>
+
+            <div class="box border-box">
+                Content Area (250px &times; 50px)
+            </div>
+
+            <div class="calculation-card">
+                <h3>Dimensions Math:</h3>
+                <ul>
+                    <li>Declared Width: <code>300px</code></li>
+                    <li>Padding (Left/Right): <code>20px + 20px = 40px</code> (internalized)</li>
+                    <li>Border (Left/Right): <code>5px + 5px = 10px</code> (internalized)</li>
+                    <li><b>Total Visible Width:</b> <code>300px</code> (exactly matches declared)</li>
+                    <li><i>Inner Content Width:</i> <code>300 - 40 - 10 = 250px</code></li>
+                </ul>
+                <ul>
+                    <li>Declared Height: <code>100px</code></li>
+                    <li>Padding (Top/Bottom): <code>20px + 20px = 40px</code> (internalized)</li>
+                    <li>Border (Top/Bottom): <code>5px + 5px = 10px</code> (internalized)</li>
+                    <li><b>Total Visible Height:</b> <code>100px</code> (exactly matches declared)</li>
+                    <li><i>Inner Content Height:</i> <code>100 - 40 - 10 = 50px</code></li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

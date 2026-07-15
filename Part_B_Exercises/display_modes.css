@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    padding: 2rem;
+}
+
+header {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+h1 {
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.display-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #0f172a;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.demo-wrapper {
+    background-color: #f1f5f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+    margin-bottom: 1.5rem;
+}
+
+/* Base styles for the boxes to demonstrate sizing behavior */
+.block-box, .inline-box, .inline-block-box {
+    width: 150px;
+    height: 60px;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid #1d4ed8;
+    
+    /* Center text internally */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Override flex-internal display for inline elements to show true behavior */
+.inline-box {
+    display: inline;
+    padding: 0.5rem 1rem; /* Padding added for visualization */
+}
+
+/* ===== 1. Block Display ===== */
+.block-box {
+    display: block;
+    margin: 15px 0;
+    /* Reset flex alignment since block is applied */
+    text-align: center;
+    line-height: 56px; /* center text vertically manually */
+}
+
+/* ===== 2. Inline Display ===== */
+.inline-box {
+    display: inline;
+    margin: 25px 15px; /* vertical margin will be ignored, horizontal works */
+}
+
+.inline-wrapper {
+    line-height: 3; /* gives space between lines for visualization */
+}
+
+/* ===== 3. Inline-Block Display ===== */
+.inline-block-box {
+    display: inline-block;
+    width: 180px;
+    margin: 10px;
+    /* Reset text alignment since inline-block is applied */
+    text-align: center;
+    line-height: 56px;
+}
+
+/* Feature Notes styling */
+.feature-notes {
+    background-color: #f8fafc;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #3b82f6;
+}
+
+.feature-notes ul {
+    list-style-type: square;
+    padding-left: 1.25rem;
+}
+
+.feature-notes li {
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
+}
+
+code {
+    background-color: #f1f5f9;
+    color: #ef4444;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
